@@ -3,11 +3,11 @@ from zooAnimales.animal import Animal
 class Ave(Animal):
     halcones=0
     aguilas=0
-    _aves=[]
+    aves=[]
     def __init__(self, nombre, edad, habitat, genero, colorPlumas):
         super.__init__(nombre, edad, habitat, genero)
         self._colorPlumas=colorPlumas
-        Ave._aves.append(self)
+        Ave.aves.append(self)
         Animal.totalAnimales+=1
     
     @classmethod
@@ -28,10 +28,10 @@ class Ave(Animal):
         return self._colorPlumas
     
     def cantidadAves(self):
-        return len(self._aves)
+        return len(self.aves)
 
     def getAves(self):
-        return self._aves
+        return self.aves
     
     def setAves(self, aves):
-        self._aves=aves
+        self.aves=aves

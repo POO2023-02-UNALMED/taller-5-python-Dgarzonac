@@ -3,13 +3,13 @@ from zooAnimales.animal import Animal
 class Reptil(Animal):
     iguanas=0
     serpientes=0
-    _reptiles=[]
+    reptiles=[]
     
     def __init__(self, nombre, edad, habitat, genero, colorEscamas, largoCola):
         super.__init__(nombre, edad, habitat, genero)
         self._colorEscamas=colorEscamas
         self._largoCola=largoCola
-        Reptil._reptiles.append(self)
+        Reptil.reptiles.append(self)
         Animal.totalAnimales+=1
     
     @classmethod
@@ -26,13 +26,13 @@ class Reptil(Animal):
         return "reptar"
 
     def cantidadReptiles(self):
-        return len(self._reptiles)
+        return len(self.reptiles)
     
     def getReptiles(self):
-        return self._reptiles
+        return self.reptiles
     
     def setReptiles(self, reptiles):
-        self._reptiles=reptiles
+        self.reptiles=reptiles
 
     def getLargoCola(self):
         return self._largoCola

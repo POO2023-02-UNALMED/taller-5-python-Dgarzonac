@@ -3,13 +3,13 @@ from zooAnimales.animal import Animal
 class Pez(Animal):
     salmones=0
     bacalaos=0
-    _peces=[]
+    peces=[]
     
     def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas):
         super.__init__(nombre, edad, habitat, genero)
         self._colorEscamas=colorEscamas
         self._cantidadAletas=cantidadAletas
-        Pez._peces.append(self)
+        Pez.peces.append(self)
         Animal.totalAnimales+=1
     
     @classmethod
@@ -26,13 +26,13 @@ class Pez(Animal):
         return "nadar"
 
     def cantidadPeces(self):
-        return len(self._peces)
+        return len(self.peces)
     
     def getPeces(self):
-        return self._peces
+        return self.peces
     
     def setPeces(self, peces):
-        self._peces=peces
+        self.peces=peces
 
     def getCantidadAletas(self):
         return self._cantidadAletas
