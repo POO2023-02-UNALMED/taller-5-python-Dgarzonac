@@ -11,13 +11,13 @@ class Animal:
         return "desplazarse"
     
     def totalPorTipo(self):
-        return "Mamiferos: "+Animal.cantidadMamiferos()+"\n" + "Aves: "+Animal.cantidadAves()+"\n" + "Reptiles: "+Animal.cantidadReptiles()+"\n" + "Peces: "+Animal.cantidadPeces()+"\n" + "Anfibios: "+Animal.cantidadAnfibios()
+        return f"Mamiferos: "+{Animal.cantidadMamiferos()}+"\n" + "Aves: "+{Animal.cantidadAves()}+"\n" + "Reptiles: "+{Animal.cantidadReptiles()}+"\n" + "Peces: "+{Animal.cantidadPeces()}+"\n" + "Anfibios: "+{Animal.cantidadAnfibios()}
     
     def __str__(self):
-        if self._zona!=None:
-            return "Mi nombre es " + self.nombre +  ", tengo una edad de " + self.edad + ", habito en " + self.habitat + " y mi genero es " + self.genero + ", la zona en la que me ubico es " +  self.getZona() + ", en el " + self.Zoologico.getNombre()
+        if self._getZona()!=None:
+            return f"Mi nombre es " + {self._nombre} +  ", tengo una edad de " + {self._edad} + ", habito en " + {self._habitat} + " y mi genero es " + {self._genero} + ", la zona en la que me ubico es " +  {self.getZona()} + ", en el " + {self.Zoologico.getNombre()}
         else:
-            return "Mi nombre es " + self.nombre +  ", tengo una edad de " + self.edad + ", habito en " + self.habitat + " y mi genero es " + self.genero
+            return f"Mi nombre es " + {self._nombre} +  ", tengo una edad de " + {self._edad} + ", habito en " + {self._habitat} + " y mi genero es " + {self._genero}
     
     def getTotalAnimales(self):
         return self.totalAnimales
