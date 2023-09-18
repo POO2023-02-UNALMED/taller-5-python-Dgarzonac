@@ -5,19 +5,19 @@ class Ave(Animal):
     aguilas=0
     aves=[]
     def __init__(self, nombre, edad, habitat, genero, colorPlumas):
-        super.__init__(nombre, edad, habitat, genero)
+        super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas=colorPlumas
         Ave.aves.append(self)
         Animal.totalAnimales+=1
     
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):
-        halcones+=1
+        Ave.halcones+=1
         return cls(nombre, edad, "montanas", genero, "cafe glorioso", True)
     
     @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
-        aguilas+=1
+        Ave.aguilas+=1
         return cls(nombre, edad, "montanas", genero, "blanco y amarillo", False)
     
    
