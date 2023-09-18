@@ -20,8 +20,9 @@ class Anfibio(Animal):
         Anfibio.salamandras+=1
         return cls(nombre, edad, "selva", genero, "negro y amarillo", False)
     
-    def cantidadAnfibios(self):
-        return len(self.anfibios)
+    @classmethod
+    def cantidadAnfibios(cls):
+        return len(cls.anfibios)
     
     def movimiento():
         return "saltar"
@@ -43,3 +44,6 @@ class Anfibio(Animal):
     
     def setColorPiel(self, colorPiel):
         self._colorPiel=colorPiel
+    def toString(self):
+        return self.__str__()
+    

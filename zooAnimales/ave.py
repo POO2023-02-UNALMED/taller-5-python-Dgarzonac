@@ -26,11 +26,15 @@ class Ave(Animal):
     def getColorPlumas(self):
         return self._colorPlumas
     
-    def cantidadAves(self):
-        return len(self.aves)
+    @classmethod
+    def cantidadAves(cls):
+        return len(cls.aves)
 
     def getAves(self):
         return self.aves
     
     def setAves(self, aves):
         self.aves=aves
+
+    def toString(self):
+        return self.__str__()

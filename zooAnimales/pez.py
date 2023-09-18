@@ -24,7 +24,8 @@ class Pez(Animal):
     
     def movimiento():
         return "nadar"
-
+    
+    @classmethod
     def cantidadPeces(self):
         return len(self.peces)
     
@@ -45,3 +46,6 @@ class Pez(Animal):
     
     def setColorEscamas(self, colorEscamas):
         self._colorEscamas=colorEscamas
+
+    def toString(self):
+        return self.__str__()

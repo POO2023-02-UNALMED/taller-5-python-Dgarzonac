@@ -24,9 +24,10 @@ class Mamifero(Animal):
     
     def movimiento():
         return "desplazarse"
-
-    def cantidadMamiferos(self):
-        return len(self.mamiferos)
+    
+    @classmethod
+    def cantidadMamiferos(cls):
+        return len(cls.mamiferos)
     
     def getMamiferos(self):
         return self.mamiferos
@@ -45,3 +46,6 @@ class Mamifero(Animal):
 
     def setPelaje(self, pelaje):
         self._pelaje=pelaje
+
+    def toString(self):
+        return self.__str__()
