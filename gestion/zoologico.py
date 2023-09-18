@@ -5,7 +5,7 @@ class Zoologico:
         self._ubicacion=ubicacion
         self._zonas= []
 
-    def cantidadTotalAnimales(self, zonas):
+    def cantidadTotalAnimales(self):
         totalAnimales=0
         for zona in self._zonas:
             totalAnimales+=len(zona)
