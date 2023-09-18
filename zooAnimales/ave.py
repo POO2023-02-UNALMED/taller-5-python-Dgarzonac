@@ -12,12 +12,12 @@ class Ave(Animal):
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):
         Ave.halcones+=1
-        return cls(nombre, edad, "montanas", genero, "cafe glorioso", True)
+        return cls(nombre, edad, "montanas", genero, "cafe glorioso")
     
     @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
         Ave.aguilas+=1
-        return cls(nombre, edad, "montanas", genero, "blanco y amarillo", False)
+        return cls(nombre, edad, "montanas", genero, "blanco y amarillo")
     
    
     def movimiento():
