@@ -1,3 +1,5 @@
+from gestion.zoologico import Zoologico
+
 class Animal:
     totalAnimales=0
     def __init__(self, nombre, edad, habitat, genero):
@@ -11,12 +13,13 @@ class Animal:
         return "desplazarse"
     
     @classmethod
-    def totalPorTipo(self):
-        return f"Mamiferos: "+{Animal.cantidadMamiferos()}+"\n" + "Aves: "+{Animal.cantidadAves()}+"\n" + "Reptiles: "+{Animal.cantidadReptiles()}+"\n" + "Peces: "+{Animal.cantidadPeces()}+"\n" + "Anfibios: "+{Animal.cantidadAnfibios()}
+    def totalPorTipo(cls):
+        return f"Mamiferos:  {cls.cantidadMamiferos()} \nAves: {cls.cantidadAves()} \nReptiles: {cls.cantidadReptiles()} \nPeces:  {cls.cantidadPeces()} \nAnfibios: {cls.cantidadAnfibios()}"
     
     def __str__(self):
         if self._zona()!=None:
-            return f"Mi nombre es " + {self._nombre} +  ", tengo una edad de " + {self._edad} + ", habito en " + {self._habitat} + " y mi genero es " + {self._genero} + ", la zona en la que me ubico es " +  {self.getZona()} + ", en el " + {self.Zoologico.getNombre()}
+            return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self.getZona()}, en el {self._Zoologico.getNombre()}"
+
         else:
             return f"Mi nombre es " + {self._nombre} +  ", tengo una edad de " + {self._edad} + ", habito en " + {self._habitat} + " y mi genero es " + {self._genero}
     
@@ -29,7 +32,7 @@ class Animal:
     def getNombre(self):
         return self._nombre
     
-    def setNombre(self):
+    def setNombre(self, nombre):
         self._nombre=nombre
     
     def getEdad(self):
