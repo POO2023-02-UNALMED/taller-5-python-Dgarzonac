@@ -10,7 +10,7 @@ class Mamifero(Animal):
         self._patas=patas
         self._pelaje=pelaje
         Mamifero.mamiferos.append(self)
-        Animal.totalAnimales+=1
+       
     
     @classmethod
     def crearCaballo(cls, nombre, edad, genero):

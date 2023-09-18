@@ -10,7 +10,7 @@ class Reptil(Animal):
         self._colorEscamas=colorEscamas
         self._largoCola=largoCola
         Reptil.reptiles.append(self)
-        Animal.totalAnimales+=1
+        
     
     @classmethod
     def crearIguana(cls, nombre, edad, genero):

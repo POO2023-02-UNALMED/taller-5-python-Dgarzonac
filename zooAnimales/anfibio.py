@@ -10,7 +10,6 @@ class Anfibio(Animal):
         self._colorPiel=colorPiel
         self._venenoso=venenoso
         Anfibio.anfibios.append(self)
-        Animal.totalAnimales+=1
 
     @classmethod
     def crearRana(cls, nombre, edad, genero):

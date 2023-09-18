@@ -10,7 +10,7 @@ class Pez(Animal):
         self._colorEscamas=colorEscamas
         self._cantidadAletas=cantidadAletas
         Pez.peces.append(self)
-        Animal.totalAnimales+=1
+        
     
     @classmethod
     def crearSalmon(cls, nombre, edad, genero):

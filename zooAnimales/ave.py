@@ -8,7 +8,6 @@ class Ave(Animal):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas=colorPlumas
         Ave.aves.append(self)
-        Animal.totalAnimales+=1
     
     @classmethod
     def crearHalcon(cls, nombre, edad, genero):
