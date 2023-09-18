@@ -6,19 +6,19 @@ class Anfibio(Animal):
     _anfibios=[]
     
     def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
-        super.__init__(nombre, edad, habitat, genero)
+        super().__init__(nombre, edad, habitat, genero)
         self._colorPiel=colorPiel
         self._venenoso=venenoso
         Anfibio.anfibios.append(self)
         Animal.totalAnimales+=1
 
-
+    @classmethod
     def crearRana(cls, nombre, edad, genero):
-        ranas+=1
+        Anfibio.ranas+=1
         return cls(nombre, edad, "selva", genero, "rojo", True)
-    
+    @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
-        salamandras+=1
+        Anfibio.salamandras+=1
         return cls(nombre, edad, "selva", genero, "negro y amarillo", False)
     
     def cantidadAnfibios(self):

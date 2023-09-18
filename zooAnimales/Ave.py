@@ -1,4 +1,4 @@
-import Animal
+from zooAnimales.animal import Animal
 
 class Ave(Animal):
     halcones=0
@@ -9,9 +9,13 @@ class Ave(Animal):
         self._colorPlumas=colorPlumas
         Ave._aves.append(self)
         Animal.totalAnimales+=1
+    
+    @classmethod
     def crearHalcon(cls, nombre, edad, genero):
         halcones+=1
         return cls(nombre, edad, "montanas", genero, "cafe glorioso", True)
+    
+    @classmethod
     def crearSalamandra(cls, nombre, edad, genero):
         aguilas+=1
         return cls(nombre, edad, "montanas", genero, "blanco y amarillo", False)

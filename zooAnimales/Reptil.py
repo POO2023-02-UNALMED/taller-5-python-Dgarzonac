@@ -1,4 +1,4 @@
-import Animal
+from zooAnimales.animal import Animal
 
 class Reptil(Animal):
     iguanas=0
@@ -12,12 +12,14 @@ class Reptil(Animal):
         Reptil._reptiles.append(self)
         Animal.totalAnimales+=1
     
+    @classmethod
     def crearIguana(cls, nombre, edad, genero):
-        iguanas+=1
+        Reptil.iguanas+=1
         return cls(nombre, edad, "humedal", genero, "verde", 3)
     
+    @classmethod
     def crearSerpiente(cls, nombre, edad, genero):
-        serpientes+=1
+        Reptil.serpientes+=1
         return cls(nombre, edad, "jungla", genero, "blanco", 1)
     
     def movimiento():

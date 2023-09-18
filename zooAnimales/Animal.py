@@ -1,7 +1,7 @@
 class Animal:
-    _totalAnimales=0
+    totalAnimales=0
     def __init__(self, nombre, edad, habitat, genero):
-        Animal._totalAnimales+=1
+        Animal.totalAnimales+=1
         self._nombre=nombre
         self._edad=edad
         self._habitat=habitat
@@ -20,10 +20,10 @@ class Animal:
             return "Mi nombre es " + self.nombre +  ", tengo una edad de " + self.edad + ", habito en " + self.habitat + " y mi genero es " + self.genero
     
     def getTotalAnimales(self):
-        return self._totalAnimales
+        return self.totalAnimales
     
     def setTotalAnimales(self, totalAnimales):
-        self._totalAnimales=totalAnimales
+        self.totalAnimales=totalAnimales
     
     def getNombre(self):
         return self._nombre
