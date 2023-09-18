@@ -6,15 +6,16 @@ class Animal:
         self._edad=edad
         self._habitat=habitat
         self._genero=genero
-    
+        self._zona=None
     def movimiento():
         return "desplazarse"
     
+    @classmethod
     def totalPorTipo(self):
         return f"Mamiferos: "+{Animal.cantidadMamiferos()}+"\n" + "Aves: "+{Animal.cantidadAves()}+"\n" + "Reptiles: "+{Animal.cantidadReptiles()}+"\n" + "Peces: "+{Animal.cantidadPeces()}+"\n" + "Anfibios: "+{Animal.cantidadAnfibios()}
     
     def __str__(self):
-        if self._getZona()!=None:
+        if self._zona()!=None:
             return f"Mi nombre es " + {self._nombre} +  ", tengo una edad de " + {self._edad} + ", habito en " + {self._habitat} + " y mi genero es " + {self._genero} + ", la zona en la que me ubico es " +  {self.getZona()} + ", en el " + {self.Zoologico.getNombre()}
         else:
             return f"Mi nombre es " + {self._nombre} +  ", tengo una edad de " + {self._edad} + ", habito en " + {self._habitat} + " y mi genero es " + {self._genero}
