@@ -1,4 +1,4 @@
-from gestion.zoologico import Zoologico
+import zooAnimales
 
 class Animal:
     totalAnimales=0
@@ -14,10 +14,10 @@ class Animal:
     
     @classmethod
     def totalPorTipo(cls):
-        return f"Mamiferos:  {cls.cantidadMamiferos()} \nAves: {cls.cantidadAves()} \nReptiles: {cls.cantidadReptiles()} \nPeces:  {cls.cantidadPeces()} \nAnfibios: {cls.cantidadAnfibios()}"
+        return f"Mamiferos:  {zooAnimales.mamifero.cantidadMamiferos()} \nAves: {zooAnimales.ave.cantidadAves()} \nReptiles: {zooAnimales.reptil.cantidadReptiles()} \nPeces:  {zooAnimales.pez.cantidadPeces()} \nAnfibios: {zooAnimales.anfibio.cantidadAnfibios()}"
     
     def __str__(self):
-        if self._zona()!=None:
+        if self._zona!=None:
             return f"Mi nombre es {self._nombre}, tengo una edad de {self._edad}, habito en {self._habitat} y mi genero es {self._genero}, la zona en la que me ubico es {self.getZona()}, en el {self._Zoologico.getNombre()}"
 
         else:
